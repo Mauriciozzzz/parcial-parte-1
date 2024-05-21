@@ -1,0 +1,34 @@
+http://localhost:8080/api/persona
+{
+    "tipoDocumento": "Cedula",
+    "documento": "124123123",
+    "nombre": "Carlos Mauricio",
+    "telefono": "32127282",
+    "direccion": "barrio"
+}
+http://localhost:8080/api/categoria
+{
+    "nombre": "Deportivo",
+    "descripcion": "2021"
+}
+http://localhost:8080/api/usuario
+{
+    "correo": "carlosmauricio@gmail.com,
+    "contraseña": "sofia",
+    "personaId":{
+        "id":1
+    }
+}
+http://localhost:8080/api/carro
+{
+    "marca": "Mustang",
+    "modelo": "2021",
+    "placa": "BMW",
+    "color": "Verde",
+    "categoriaId":{
+        "id":1
+    },
+    "usuarioId":{
+        "id":1
+    }
+}
