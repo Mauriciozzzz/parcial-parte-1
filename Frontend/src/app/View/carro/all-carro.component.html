@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Listado de Carros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="card-actions">
+    <ion-card-header>
+      <ion-card-subtitle>Opciones disponibles</ion-card-subtitle>
+      <ion-card-title>Acciones</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="button-group">
+        <ion-button color="success" routerLink="/crearCarro">Crear Carro</ion-button>
+        <ion-button color="secondary" routerLink="/menu">Menú</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-list">
+    <ion-card-header>
+      <ion-card-subtitle>Información</ion-card-subtitle>
+      <ion-card-title>Listado de Carros</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Placa</th>
+            <th>Color</th>
+            <th>IdCategoria</th>
+            <th>IdUsuario</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let carro of carros">
+            <td>{{carro.id}}</td>
+            <td>{{carro.marca}}</td>
+            <td>{{carro.modelo}}</td>
+            <td>{{carro.placa}}</td>
+            <td>{{carro.color}}</td>
+            <td>{{carro.categoriaId?.id}}</td>
+            <td>{{carro.usuarioId?.id}}</td>
+            <td class="actions-column">
+              <ion-button fill="clear" size="small" color="tertiary" routerLink="/detailCarro">Buscar id</ion-button>
+              <ion-button fill="clear" size="small" color="warning" routerLink="/updateCarro">Actualizar</ion-button>
+              <ion-button fill="clear" size="small" color="danger" (click)="deleteProducto(carro.id)">Eliminar</ion-button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="secondary"> <!-- Cambiado a color secundario para un contraste visual -->
+    <ion-title>Nuevo Carro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding"> <!-- Añadida clase de relleno -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Información del Carro</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Marca</ion-label>
+          <ion-input type="text" [(ngModel)]="carro.marca"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Modelo</ion-label>
+          <ion-input [(ngModel)]="carro.modelo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Placa</ion-label>
+          <ion-input [(ngModel)]="carro.placa"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Color</ion-label>
+          <ion-input [(ngModel)]="carro.color"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Categoría</ion-label>
+          <ion-select [(ngModel)]="carro.categoriaId">
+            <ion-select-option *ngFor="let categoria of categorias" [value]="categoria">{{ categoria.nombre }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label>Usuario</ion-label>
+          <ion-select [(ngModel)]="carro.usuarioId">
+            <ion-select-option *ngFor="let usuario of usuarios" [value]="usuario">{{ usuario.correo }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-button expand="full" color="success" (click)="saveCarro()">Guardar</ion-button>
+      <ion-button color="primary" expand="full" routerLink="/allCarro">
+        <ion-icon name="return-down-back-sharp"></ion-icon> Volver
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

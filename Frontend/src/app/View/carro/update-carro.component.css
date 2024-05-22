@@ -1,0 +1,36 @@
+ion-header {
+  --background: #3880ff; /* Cambiar el color de fondo del header */
+  --color: #ffffff; /* Cambiar el color del texto del header */
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+ion-card {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ion-card-header {
+  background-color: #f0f0f0; /* Cambiar el color de fondo del encabezado de la tarjeta */
+  border-bottom: 1px solid #dddddd; /* Añadir un borde inferior */
+}
+
+ion-card-title {
+  font-size: 1.2em;
+  color: #333;
+}
+
+ion-card-content {
+  padding: 16px;
+}
+
+ion-button {
+  margin-top: 16px;
+}

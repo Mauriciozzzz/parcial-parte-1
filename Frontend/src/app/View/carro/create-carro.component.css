@@ -1,0 +1,26 @@
+ion-header {
+  --background: #3880ff; /* Cambiar el color de fondo del header */
+  --color: #ffffff; /* Cambiar el color del texto del header */
+}
+
+ion-card {
+  border-radius: 8px; /* Añadir bordes redondeados a la tarjeta */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadir una ligera sombra */
+}
+
+ion-card-header {
+  background-color: #f0f0f0; /* Cambiar el color de fondo del encabezado de la tarjeta */
+  border-bottom: 1px solid #dddddd; /* Añadir un borde inferior */
+}
+
+ion-card-title {
+  color: #333;
+}
+
+ion-card-content {
+  padding: 16px;
+}
+
+ion-button {
+  margin-top: 16px;
+}

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Crear Categoría</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center ion-padding">
+  <div class="form-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Crear Categoría</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <ion-list>
+            <ion-item lines="full">
+              <ion-label position="floating">Nombre: <ion-text color="danger">(Requerido)</ion-text></ion-label>
+              <ion-input type="text" id="nombre" name="nombre" autocomplete="off" required [(ngModel)]="nombre"></ion-input>
+            </ion-item>
+            <ion-item lines="full">
+              <ion-label position="floating">Descripción: <ion-text color="danger">(Requerido)</ion-text></ion-label>
+              <ion-input type="text" id="descripcion" name="descripcion" autocomplete="off" required [(ngModel)]="descripcion"></ion-input>
+            </ion-item>
+          </ion-list>
+
+          <ion-button type="submit" color="success" expand="full" [disabled]="!f.valid" class="mb-1">
+            <ion-icon name="save-sharp"></ion-icon> Guardar
+          </ion-button>
+
+          <ion-button color="primary" expand="full" routerLink="/allCategoria">
+            <ion-icon name="return-down-back-sharp"></ion-icon> Volver
+          </ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

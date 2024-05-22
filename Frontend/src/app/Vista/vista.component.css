@@ -1,0 +1,22 @@
+.car-list {
+  padding: 0 16px;
+}
+
+.car-item {
+  --background: #ffffff;
+  margin: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.car-item h2 {
+  font-size: 1.2em;
+  margin: 0;
+  color: #333;
+}
+
+.car-item p {
+  margin: 4px 0 0;
+  color: #666;
+  font-size: 0.9em;
+}

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Listado de Categorías</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Acciones</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="button-group">
+        <ion-button color="success" routerLink="/crearCategoria">Crear Categoría</ion-button>
+        <ion-button color="secondary" routerLink="/menu">Menú</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Listado de Categorías</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <table class="responsive-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let categoria of categorias">
+            <td>{{categoria.id}}</td>
+            <td>{{categoria.nombre}}</td>
+            <td>{{categoria.descripcion}}</td>
+            <td class="actions-column">
+              <ion-button fill="clear" size="small" color="tertiary" routerLink="/detailCategoria/{{categoria.id}}">Buscar id</ion-button>
+              <ion-button fill="clear" size="small" color="warning" routerLink="/updateCategoria/{{categoria.id}}">Actualizar</ion-button>
+              <ion-button fill="clear" color="danger" (click)="deleteCategoria(categoria.id)">Eliminar</ion-button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

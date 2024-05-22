@@ -1,0 +1,60 @@
+ion-header {
+  --background: #222428; /* Cambiar el color de fondo del header */
+  --color: #ffffff; /* Cambiar el color del texto del header */
+}
+
+.card-actions {
+  margin: 16px;
+  border-left: 5px solid #3880ff; /* Añadir un borde lateral distintivo */
+}
+
+.card-list {
+  margin: 16px;
+  border-left: 5px solid #10dc60; /* Añadir un borde lateral distintivo */
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around; /* Cambiar a space-around para un mejor espaciado */
+  margin-bottom: 16px;
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #dddddd;
+}
+
+.responsive-table th {
+  background-color: #e0e0e0; /* Cambiar el color de fondo de los encabezados */
+}
+
+.actions-column ion-button {
+  margin: 0 2px;
+}
+
+ion-card-header {
+  background-color: #f0f0f0; /* Color de fondo para headers de tarjeta */
+  border-bottom: 1px solid #cccccc; /* Borde inferior */
+}
+
+ion-card-title, ion-card-subtitle {
+  color: #333;
+}
+
+ion-card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+ion-card-subtitle {
+  font-size: 0.9em;
+  color: #666;
+}
